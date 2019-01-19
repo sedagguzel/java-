@@ -1,0 +1,32 @@
+/* 
+ In this example, a student enters his/her score.If his/her score greater or equal to 60,
+ the program will show "You pass the exam",if not it will show "You don't pass the exam." 
+ */
+import java.util.Scanner;
+
+public class Exercise_05_01 {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		System.out.print("Enter your score");
+		int num1 = input.nextInt();
+		printGrade(num1);
+	}
+
+	public static void printGrade(int num1) {
+		int pass = 0;
+		while (num1 >= 60) {
+			System.out.println("You pass the exam");
+			pass++;
+			System.out.println(pass);
+			break;
+		}
+		int fail = 0;
+		while (num1 < 60) {
+			System.out.println("You don't pass the exam.");
+			fail--;
+			System.out.println(fail);
+			break;
+		}
+	}
+}
