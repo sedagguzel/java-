@@ -1,0 +1,41 @@
+/*
+In this example, the programme will ask five random math subtraction guestion for two between 1-12 to ask primary school student.
+*/
+import java.util.Scanner;
+
+public class Exercise_05_02 {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		int correct = 0;
+		int wrong = 0;
+		int numberOfQuestions = 0;
+		int num1 = 5;
+		while (numberOfQuestions < num1) {
+			int num2 = (int) (1 + Math.random() * 13);
+			int num3 = (int) (1 + Math.random() * 13);
+			if (num2 == num3) {
+
+			}
+			if (num2 < num3) {
+				int temp = num3;
+				num2 = num3;
+				num3 = temp;
+			}
+			System.out.println("What is the " + num2 + "-" + num3);
+			int ans = input.nextInt();
+			if (num2 - num3 == ans) {
+				System.out.println("Good job!");
+				correct++;
+			} else {
+				System.out.println("Your answer is wrong.Please try again.");
+				wrong++;
+			}
+			numberOfQuestions++;
+
+		}
+		System.out.println("You have done" + correct);
+
+	}
+
+}
