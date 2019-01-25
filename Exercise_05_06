@@ -1,0 +1,17 @@
+/* (Conversation from squaremeter to ping) In this example, the java programme will 
+ * show the table from 10-80 ping.
+ */
+public class Exercise_05_06 {
+	public static void main(String[] args) {
+		double num1 = 3.305;
+		System.out.println("Ping     Square meter " + "             Ping       Square meter");
+		for (int i = 10, j = 30; i <= 80 && j <= 100; i += 5, j += 10) {
+			System.out.printf("%-12d%7.1f", i, i * num1);
+			System.out.print("       |        ");
+			System.out.printf("%-9d%12.2f\n", j, (j / num1));
+
+		}
+
+	}
+
+}
